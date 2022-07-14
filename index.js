@@ -50,7 +50,7 @@ const validations = (edad, genero, email, phone, marca, anio, km) =>{
 
     console.log(
         edad,
-        gnero,
+        genero,
         email,
         phone,
         marca,
@@ -58,7 +58,7 @@ const validations = (edad, genero, email, phone, marca, anio, km) =>{
         km
     );
 
-    function seguro(marca, modelo, anio, km) {
+    function seguro (marca, modelo, anio, km) {
         this.marca= marca;
         this.modelo= modelo;
         this.anio= anio;
@@ -88,5 +88,14 @@ const validations = (edad, genero, email, phone, marca, anio, km) =>{
     
         default:
             break;
+    }
+
+    //desafio complementario arrays//
+    const aseguradoras = [{id:1, aseguradora: "Mapfre"},
+                          {id:2, aseguradora:"Meridional"},
+                          {id:3, aseguradora:"Sancor"}];
+    for (const aseguradora of aseguradoras){
+        console.log(aseguradora.id);
+        console.log(aseguradora.aseguradora);
     }
 
