@@ -3,3 +3,23 @@
     padding: 0%;
     border-radius: 0%;
 }
+
+@font-face {
+    font-family:"comication" ;
+    src: url(./fuentes/Comication.ttf);
+}
+
+@font-face {
+    font-family: "gameofsquid";
+    src: url(/fuentes/Game\ Of\ Squids.otf);
+}
+
+.segurosSrl{
+    font-family: "gameofsquid";
+    background-color: gray;
+}
+
+.footer{
+    font-family: "gameofsquid";
+    background-color: gray;
+}
