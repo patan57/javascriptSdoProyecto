@@ -27,75 +27,90 @@ let email = prompt("Ingrese email");
 let phone = prompt("Ingrese teléfono");// recomendable variables en inglés/ entrevistas técnicas
 let marca = prompt("Ingrese marca del automóvil");
 let modelo = prompt("Ingrese el modelo de su automóvil")
-let anio = prompt ("Ingrese año del automovil")
-let km = prompt ("Ingrese kilometraje")
+let anio = prompt("Ingrese año del automovil")
+let km = prompt("Ingrese kilometraje")
 
 
-function coticeSuVehiculo(edad, anio, km){
-    if(edad>=69) || (anio<=1998) || (km>=150000){
+function coticeSuVehiculo(edad, anio, km) {
+    if (edad >= 69) || (anio <= 1998) || (km >= 150000){
         alert("No puede ser asegurado");
     }else
     {
         alert("Cotice su vehículo");
-    } 
-
-const validations = (edad, genero, email, phone, marca, anio, km) =>{
-    // Declaración sin asignación
-    let isValidEdad, isValidGenero, isValidEmail, isValidPhone, isValidMarca, isValidAnio, isValidKm ;
-
-    //Validacion de numeros
-    if(isNaN(edad) || isNaN(phone) || isNaN(anio) ||isNaN(km)){
-        alert("Error, revise haber tipeado correctamente");
+    }
     }
 
-    console.log(
-        edad,
-        genero,
-        email,
-        phone,
-        marca,
-        anio,
-        km
-    );
+    const validations = (edad, genero, email, phone, marca, anio, km) => {
+        // Declaración sin asignación
+        let isValidEdad, isValidGenero, isValidEmail, isValidPhone, isValidMarca, isValidAnio, isValidKm;
 
-    function seguro (marca, modelo, anio, km) {
-        this.marca= marca;
-        this.modelo= modelo;
-        this.anio= anio;
-        this.km= km;
-    }
+        //Validacion de numeros
+        if (isNaN(edad) || isNaN(phone) || isNaN(anio) || isNaN(km)) {
+            alert("Error, revise haber tipeado correctamente");
+        }
 
-    /* 
-        1= >=100milkm && <=150milkm
-        2= >=75milkm && <=99milkm
-        3= >=0milkm && <=74milkm
+        console.log(
+            edad,
+            genero,
+            email,
+            phone,
+            marca,
+            anio,
+            km
+        );
+
+        function seguro(marca, modelo, anio, km) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.anio = anio;
+            this.km = km;
+        }
+
+        /* 
+            1= >=100milkm && <=150milkm
+            2= >=75milkm && <=99milkm
+            3= >=0milkm && <=74milkm
+            
+        */
+
+        let cotizacion;
+        const base = 10000
+
+        switch (key) {
+            case '1':
+                cotizacion = base * 1.35
+                break;
+            case '2':
+                cotizacion = base * 1.25
+                break;
+            case '3':
+                cotizacion = base * 1.05
+                break;
+
+            default:
+                break;
+        }
+
+        //desafio complementario arrays//
+        const aseguradoras = [{ id: 1, aseguradora: "Mapfre" },
+        { id: 2, aseguradora: "Meridional" },
+        { id: 3, aseguradora: "Sancor" }];
+        for (const aseguradora of aseguradoras) {
+            console.log(aseguradora.id);
+            console.log(aseguradora.aseguradora);
+        }
+
+        //clase 7//
+        function mayorQue(n) {
+            return m => m > n;
+        }
+
+        function iteradora(arreglo, funcion) {
+            for(const item of arreglo){
+                function(item)
+            }
+        }
+
         
-    */
-
-    let cotizacion;
-    const base = 10000
-
-    switch (key) {
-        case '1':
-            cotizacion = base*1.35
-            break;
-        case '2':
-            cotizacion = base*1.25
-            break;
-        case '3':
-            cotizacion = base*1.05
-            break;
-    
-        default:
-            break;
-    }
-
-    //desafio complementario arrays//
-    const aseguradoras = [{id:1, aseguradora: "Mapfre"},
-                          {id:2, aseguradora:"Meridional"},
-                          {id:3, aseguradora:"Sancor"}];
-    for (const aseguradora of aseguradoras){
-        console.log(aseguradora.id);
-        console.log(aseguradora.aseguradora);
-    }
-
+        iteradora([1,7,3,5,8], console.log);
+ 
