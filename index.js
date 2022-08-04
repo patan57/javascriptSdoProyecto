@@ -32,10 +32,9 @@ let km = prompt("Ingrese kilometraje")
 
 
 function coticeSuVehiculo(edad, anio, km) {
-    if (edad >= 69) || (anio <= 1998) || (km >= 150000){
+    if ((edad >= 69) || (anio <= 1998) || (km >= 150000));{
         alert("No puede ser asegurado");
-    }else
-    {
+    }else{
         alert("Cotice su vehículo");
     }
     }
