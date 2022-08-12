@@ -79,3 +79,23 @@ formLabel1.addEventListener('change', (e) =>{
     }
 })
 
+const traerPublicaciones = async () => {
+    const lista = document.getElementById("listado");
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const publicaciones = await response.json();
+        publicaciones.forEach(publicacion => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+          <h2>${publicacion.title}</h2>
+          <p>${publicacion.body}</p>
+        `;
+
+            lista.append(li);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+traerPublicaciones();
+
